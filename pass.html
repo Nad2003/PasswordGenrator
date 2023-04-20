@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pass.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="inputclass">
+    <h2>PASSWORD GENRATOR</h2>
+    <input type="text" class="input1" id="password">
+    <button class="btn" onclick="passgen()">GENRATE</button>
+</div>
+<script>
+    function passgen(){
+        var chars="0123446789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+={}{}\|?/";
+        var len=8;
+        var password="";
+        for(var i=0;i<len;i++){
+            var randome=Math.floor(Math.random()*chars.length);
+            password+=chars.substring(randome,randome+1);
+// console.log(password);
+       }
+    document.getElementById("password").value=password
+    }
+</script>
+</body>
+</html>
